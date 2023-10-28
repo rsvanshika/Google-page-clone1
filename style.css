@@ -1,0 +1,361 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("https://marketplace.canva.com/EAEthkBVLfQ/1/0/800w/canva-blush-wave-desktop-wallpaper-S_4-_kpzunc.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    display :flex;
+    width: 100%;
+    height: 100vh;
+    
+
+}
+
+.left-container{
+   width: 25%;
+
+}
+
+.mid-container{
+   
+    width: 50%;
+    padding: 10px 20px;
+}
+.right-container{
+ 
+    width: 25%;
+}
+.box{
+
+    width:80%;
+    margin: 10rem 2rem;
+   
+    min-height: 30vh;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgb(227, 225, 227) 100%);
+    border-radius:30px;
+    padding:30px 30px;
+
+
+
+}
+
+.box h1{
+    text-align:center;
+    font-weight: 600;
+   
+    margin-bottom:15px ;
+}
+
+#inputbx{
+    width:100%;
+    position: relative;
+    /* margin: auto; */
+    border:2px double black;
+    outline:none;
+    padding:10px 7px;
+    border-radius: 10px;
+    font-size:1.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+#add{
+    width:100px;
+    font-size:1.5rem;
+    margin-top: 10px;
+
+    padding:8px 7px;
+    border-radius: 10px;
+   
+
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+    font-size: 1.5rem;
+    padding:10px 7px;
+    border-radius: 10px;
+    background-color: azure;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top:5px;
+}
+
+ul li span{
+    position: absolute;
+    right:5px;
+    top:8px;
+    font-weight: 600;
+    width: 15%;
+    font-size:2rem;
+    color: red;
+    line-height: 30px;
+    text-align: center;
+}
+ul li span:hover{
+    background: #edeef0;
+
+}
+
+.start, .reset{
+
+    width:100px;
+    font-size:1.5rem;
+    margin-top: 10px;
+
+    padding:8px 7px;
+    border-radius: 10px;
+   
+
+}
+
+#date-input,#time-input{
+    font-size:1.5rem;
+    margin-top: 10px;
+
+    padding:8px 7px;
+    border-radius: 10px;
+
+}
+
+
+#show-countdown{
+    width: 100%;
+    display: flex;
+    margin: 1.5rem 0;
+   
+    font-size: 1.5rem;
+    justify-content: space-between;
+    text-align: center;
+}
+/* #show-countdown h1{
+    
+} */
+
+.show{
+    width: 100px;
+    background-color: #090909;
+    color:#ffff;
+    font-size: 2.5rem;
+    text-align: center;
+    
+    margin: 0.5rem 0;
+   
+
+
+}
+
+
+/* ----------time---------- */
+
+.time{
+    position:relative;
+    top:20%;
+    right:0;
+    width:90%;
+    margin: 10rem 2rem;
+   
+    min-height: 20vh;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgb(227, 225, 227) 100%);
+    border-radius:30px;
+    padding:30px 30px;
+
+} 
+.time h1{
+
+    text-align:center;
+    font-weight: 600;
+   
+    margin-bottom:15px ;
+
+}
+
+
+#clock{
+    width:80%;
+    height: 5vh;
+    margin: auto;
+    text-align: center;
+  
+   
+    background-color: #7ee715;
+    border: 1px solid#212121;
+    border-radius: 8px;
+    color: black;
+    font-size: 3.5rem;
+   
+    font-weight: 400;
+}
+
+
+
+/* ---------Search bar--------
+ */
+
+ .search-bar {
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ #search-input {
+    width:100%;
+    position: relative;
+    outline:none;
+    /* margin: auto; */
+   
+    border: none;
+    padding:15px 10px;
+    border-radius: 25px;
+    font-size:2rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);}
+
+#icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width:90%;
+    margin: 5% auto;
+}
+
+.icon {
+   
+   
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+     
+   
+}
+.icon:hover{
+    transform: scale(1.2);
+
+}
+
+.icon img {
+    width: 144px;
+   
+    margin-bottom: 5px;
+}
+
+
+.delete-icon {
+    position: absolute;
+    top:0;
+    right: 0px;
+    background-color: #ff5858;
+    color: white;
+    border-radius: 3px;
+    padding: 2px 5px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.icon:hover .delete-icon{
+    transform: scale(1.2);
+
+}
+
+
+
+
+@media (max-width: 768px)   { 
+    /* Your mobile styles go here */
+
+    .container{
+        display:block;
+        height: 100%;
+
+    
+    }
+    .left-container{
+        width: 100%;
+     
+     }
+     
+     .box{
+
+        width:80%;
+        margin: 10rem 2rem;
+       
+    
+    }
+
+    #show-countdown{
+        
+        margin: 2rem 0;
+       
+        font-size: 1rem;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .show{
+        width: 60px;
+        background-color: #090909;
+        color:#ffff;
+        font-size: 2rem;
+        text-align: center;
+        
+       
+    
+    
+    }
+
+    /* ---------Search bar--------
+ */
+
+
+ .mid-container{
+   
+    width: 90%;
+    margin: auto;
+}
+
+#search-input {
+ 
+    font-size:1.5rem;
+    
+
+}
+.right-container{
+    width: 90%;
+    margin: auto;
+ 
+ }
+
+ #icon-container {
+    display: flex;
+    
+    width:100%;
+    margin:5px 0px;
+}
+.icon{
+    width: 45%;
+    margin:auto;
+}
+.icon img{
+    width:100px;
+}
+
+ #clock{
+    
+
+    font-size: 2rem;
+   
+
+}
+
+}
+
+
+
