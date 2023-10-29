@@ -175,6 +175,7 @@ searchBar.addEventListener('keyup', function () {
 
     })
 
+    
    
     
 })

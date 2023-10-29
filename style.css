@@ -258,7 +258,7 @@ ul li span:hover{
     background-color: #ff5858;
     color: white;
     cursor: pointer;
-    /* visibility: hidden; */
+    display: none;
   
   
 }
