@@ -188,7 +188,7 @@ ul li span:hover{
     text-align: center;
   
    
-    background-color: #7ee715;
+    /* background-color: #7ee715; */
     border: 1px solid#212121;
     border-radius: 8px;
     color: black;
@@ -225,11 +225,13 @@ ul li span:hover{
     flex-wrap: wrap;
     padding: 10px;
     max-width:90%;
-    margin: 5% auto;
+    margin:auto;
+    margin-top: 30px;
+   
 }
 
 .icon {
-   
+    background-color: green;
     position: relative;
     padding: 5px;
     margin: 10px;
@@ -246,8 +248,9 @@ ul li span:hover{
 
 .icon img {
     width: 80px;
+    display: block;
    
-    margin-bottom: 5px;
+    margin:auto;
 }
 
 
@@ -284,12 +287,14 @@ ul li span:hover{
     .left-container{
         width: 100%;
      
+     
      }
      
      .box{
 
         width:80%;
-        margin: 10rem 2rem;
+        margin:auto;
+        margin-top:30px;
        
     
     }
@@ -342,11 +347,14 @@ ul li span:hover{
     display: flex;
     
     width:100%;
-    margin:5px 0px;
+    margin:auto
+    background-color: #7ee715;
 }
 .icon{
     width: 45%;
     margin:auto;
+    margin-top:20px;
+   
 }
 .icon img{
     width:100px;
@@ -354,7 +362,7 @@ ul li span:hover{
 
  #clock{
     
-
+    
     font-size: 2rem;
    
 
