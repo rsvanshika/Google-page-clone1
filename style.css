@@ -89,13 +89,13 @@ ul li{
 
 ul li span{
     position: absolute;
-    right:1px;
-    top:0.5px;
+    right:4px;
+    top:2px;
     font-weight: 600;
-    width: 15%;
-    font-size:2rem;
+    width: 1rem;
+    font-size:1rem;
     color: red;
-    line-height: 30px;
+    line-height: 20px;
     text-align: center;
 }
 ul li span:hover{
