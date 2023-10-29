@@ -114,7 +114,7 @@ startBtn.addEventListener('click', function () {
 
     
 
-
+      document.getElementById('error').textContent = "";
     intervalId = setInterval(updateCountdown, 1000);
     running = true;
     this.textContent = 'Pause';
