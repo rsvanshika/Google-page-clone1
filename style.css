@@ -115,10 +115,10 @@ ul li span:hover{
 
 }
 
-#date-input,#time-input{
+#date-input{
     font-size:0.5rem;
     margin: 10px 0px 0px 0px;
-    width: 48%;
+    width: 80%;
     padding:5px 8px;
     border-radius: 10px;
 

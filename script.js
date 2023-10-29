@@ -6,9 +6,10 @@ let addBtn= document.querySelector("#add")
 // -----------countdown---------
 
 let dateInp=document.querySelector("#date-input")
-let timeInp=document.querySelector("#time-input")
+
 let startBtn=document.querySelector(".start")
 let resetBtn=document.querySelector(".reset")
+
 // let startBtn=document.querySelector("#")
 
 //----------search bar-----------
@@ -63,55 +64,70 @@ showtask();
 
 /* ----------countdown----- */
 
-function startCountDown(){
-    const date= dateInp.value;
-    const time= timeInp.value;
-    // console.log(date)
-
-    const endTime= new Date( date + " "+ time)
-
-    setInterval(()=>calculateTime(endTime),1000)
+let intervalId;
+let running = false;
+let targetDate = 0;
 
 
-function calculateTime(){
-    const currentTime= new Date();
-    const days= document.querySelector("#cntdays")
-    const hours= document.querySelector("#cnthours")
-    const minutes= document.querySelector("#cntminutes")
-    const seconds= document.querySelector("#cntseconds")
-  
 
-    if(endTime> currentTime){
-        const timeLeft= (endTime-currentTime)/1000;
 
-        days.innerText=Math.floor(timeLeft/(24*60*60))
-        hours.innerText=Math.floor(timeLeft/(60*60)%24)
-        minutes.innerText=Math.floor(timeLeft/(60)%60)
-        seconds.innerText=Math.floor(timeLeft%(60))
-    }
-    else{
-        days.innerText=0
-        hours.innerText=0
-        minutes.innerText=0
-        seconds.innerText=0
 
-    }
-}
+function updateCountdown() {
+  if (targetDate <= new Date().getTime()) {
+    clearInterval(intervalId);
+    running = false;
+    startBtn.textContent = 'Start';
+    updateDisplay(0);
+  } else {
+    const timeRemaining = targetDate - new Date().getTime();
+    updateDisplay(timeRemaining);
+  }
 }
 
+function updateDisplay(time) {
+  const days = Math.floor(time / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((time % (1000 * 60)) / 1000);
 
+  document.getElementById('cntdays').textContent = String(days).padStart(2, '0');
+  document.getElementById('cnthours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('cntminutes').textContent = String(minutes).padStart(2, '0');
+  document.getElementById('cntseconds').textContent = String(seconds).padStart(2, '0');
+}
 
+startBtn.addEventListener('click', function () {
+  if (!running) {
+    targetDate =new Date(dateInp.value).getTime();
+    console.log(targetDate)
+   
+    if (isNaN(targetDate)) {
+      alert("Invalid date and time format. Please use the correct format.");
+      return;
+    }
 
-startBtn.addEventListener("click",startCountDown)
-resetBtn.addEventListener("click",()=>{
+    intervalId = setInterval(updateCountdown, 1000);
+    running = true;
+    this.textContent = 'Pause';
+    updateCountdown();
+  } else {
+    clearInterval(intervalId);
+    running = false;
+    this.textContent = 'Resume';
+  }
+});
 
+resetBtn.addEventListener('click', function () {
+    // console.log("hi")
+  clearInterval(intervalId);
+  running = false;
+  startBtn.textContent = 'Start';
+  targetDate = 0;
+ dateInp.value = '';
+  updateCountdown();
+});
 
-    document.querySelector("#cntdays").innerText=0;
-    document.querySelector("#cnthours").innerText=0;
-    document.querySelector("#cntminutes").innerText=0;
-    document.querySelector("#cntseconds").innerText=0;
-
-})
+updateCountdown(); // Initialize the display
 
 
 // ------------clock-----------
@@ -144,8 +160,7 @@ searchBar.addEventListener('keyup', function () {
         const iconName = icon.getAttribute('id');
       
        
-        console.log(link)
-        if(iconName.includes(searchTerm)|| aTag.href.includes(searchTerm)){
+        if(iconName.includes(searchTerm)){
             icon.style.display='block'
             
         }
