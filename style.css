@@ -230,7 +230,7 @@ ul li span:hover{
 
 .icon {
    
-   
+    position: relative;
     padding: 5px;
     margin: 10px;
     border-radius: 5px;
@@ -253,18 +253,19 @@ ul li span:hover{
 
 .delete-icon {
     position: absolute;
-    top:0;
-    right: 0px;
+   top: 0;;
+    right: 1px;
     background-color: #ff5858;
     color: white;
-    border-radius: 3px;
-    padding: 2px 5px;
     cursor: pointer;
-    visibility: hidden;
+    /* visibility: hidden; */
+  
+  
 }
 
 .icon:hover .delete-icon{
     transform: scale(1.2);
+    display: block;
 
 }
 
@@ -295,9 +296,10 @@ ul li span:hover{
 
     #show-countdown{
         
-        margin: 1rem 0;
+        margin: 1rem .5rem;
+        gap:2px;
        
-        font-size: 1rem;
+        font-size: 0.5rem;
         justify-content: space-between;
         text-align: center;
     }
@@ -306,7 +308,7 @@ ul li span:hover{
         width: 60px;
         background-color: #090909;
         color:#ffff;
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
         
        

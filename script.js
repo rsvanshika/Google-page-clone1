@@ -179,6 +179,17 @@ searchBar.addEventListener('keyup', function () {
     
 })
 
+const deleteButtons = document.querySelectorAll('.delete-icon');
+
+        // Attach a click event listener to each delete button
+        deleteButtons.forEach(deleteButton => {
+            deleteButton.addEventListener('click', function() {
+                const iconContainer = deleteButton.parentElement; // Get the parent container
+                iconContainer.remove(); // Remove the entire container
+            });
+        });
+
+
 
 
   
