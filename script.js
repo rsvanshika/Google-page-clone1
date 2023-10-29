@@ -65,7 +65,7 @@ showtask();
 /* ----------countdown----- */
 
 let intervalId;
-let running = false;
+let running = false;  
 let targetDate = 0;
 
 
@@ -74,6 +74,7 @@ let targetDate = 0;
 
 function updateCountdown() {
   if (targetDate <= new Date().getTime()) {
+    
     clearInterval(intervalId);
     running = false;
     startBtn.textContent = 'Start';
@@ -105,6 +106,14 @@ startBtn.addEventListener('click', function () {
       alert("Invalid date and time format. Please use the correct format.");
       return;
     }
+    const currentDate = new Date().getTime();
+    if (targetDate <= currentDate) {
+        document.getElementById('error').textContent = "Selected date and time must be in the future.";
+        return;
+      }
+
+    
+
 
     intervalId = setInterval(updateCountdown, 1000);
     running = true;
@@ -175,7 +184,7 @@ searchBar.addEventListener('keyup', function () {
 
     })
 
-    
+
    
     
 })
