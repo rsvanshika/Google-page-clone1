@@ -11,11 +11,16 @@ body{
 .container{
     display :flex;
     max-width: 100%;
-    height: 100vh;
+    justify-content: space-between;
+    padding: 0 30px;
+
     
 
 }
 
+#error{
+    font-size: 0.8rem;
+}
 .left-container{
    width: 25%;
   
@@ -25,7 +30,9 @@ body{
 .mid-container{
    
     width: 50%;
-    padding: 10px 20px;
+    padding:0 20px
+ 
+   
 }
 .right-container{
  
@@ -33,18 +40,16 @@ body{
 }
 .box{
 
-    width:80%;
+    width:100%;
     margin:auto;
     margin-top:5rem;
-    height: 35vh;
-    
-   
+
     /* background-image: url("https://cdn.vectorstock.com/i/preview-1x/03/05/pastel-pink-background-streaks-vector-39870305.jpg");
     background-size: cover; */
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgb(227, 225, 227) 100%);
     border-radius:30px;
-    padding:20px 30px;
+    padding:5% 8%;
  
 
 
@@ -70,7 +75,7 @@ body{
     /* margin: auto; */
     border:2px double black;
     outline:none;
-    padding:5px 8px;
+    padding:2% 5%;
     border-radius: 10px;
     font-size:1rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -82,9 +87,9 @@ body{
 #add{
     width:100px;
     font-size:1rem;
-    margin-top: 10px;
-
-    padding:5px 8px;
+    margin-top:2%;
+    padding:2% 5%;
+    
     border-radius: 10px;
    
 
@@ -121,9 +126,9 @@ ul li span:hover{
 
     width:100px;
     font-size:1rem;
-    margin-top: 10px;
-
-    padding:5px 8px;
+    margin-top:2%;
+    padding:2% 5%;
+   
     border-radius: 10px;
    
 
@@ -131,62 +136,55 @@ ul li span:hover{
 
 #date-input{
     font-size:0.5rem;
-    margin: 10px 0px 0px 0px;
+  
     width: 80%;
-    padding:5px 8px;
+    padding:2% 5%;
     border-radius: 10px;
 
 }
 
 
 #show-countdown{
-    width: 100%;
+    width:100%;
+  
+   display: flex;
+   justify-content: space-between;
    
-    display: flex;
-    
-    margin-top:10px;
-    justify-content: space-between;
-    font-size:10px;
-   
-    text-align: center;
+    margin-top:2%;
 }
 /* #show-countdown h1{
     
 } */
 
 .show{
-    width:1.8rem;
+   
     background-color: #090909;
     color:#ffff;
-    font-size: 1.5rem;
-    text-align: center;
- 
-    
-    margin: 0.5rem 0;
+    font-size: 2rem;
    
+    text-align: center;   
+}
 
-
+.show p{
+    font-size: .5rem;
 }
 
 
 /* ----------time---------- */
 
 .time{
-    position:relative;
-    top:20%;
-    
-    width:90%;
-    margin: auto;
    
-    min-height: 20vh;
+   
+    margin: auto;
+    margin-top:5rem;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgb(227, 225, 227) 100%);
     border-radius:30px;
-    padding:30px 30px;
+    padding:10px;
 
 } 
 .time h2{
-
+     
     text-align:center;
     font-weight: 600;
    
@@ -196,17 +194,17 @@ ul li span:hover{
 
 
 #clock{
-    width:80%;
-   
+
+    width:fit-content;
     margin: auto;
-    text-align: center;
-  
+    padding: 0.7rem;
+    
    
     background-color: #7ee715;
     border: 1px solid#212121;
     border-radius: 8px;
     color: black;
-    font-size: 2rem;
+    font-size: 1.5rem;
    
     font-weight: 400;
 }
@@ -229,7 +227,7 @@ ul li span:hover{
     /* margin: auto; */
    
     border: none;
-    padding:10px 8px;
+    padding:10px 30px;
     border-radius: 25px;
     font-size:1.5rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);}
@@ -238,18 +236,19 @@ ul li span:hover{
     display: flex;
     flex-wrap: wrap;
     padding: 15px;
-    max-width:100%;
+    max-width:80%;
     margin:auto;
     margin-top: 30px;
-    /* justify-content: space-between; */
+ 
+    justify-content:center;
    
 }
 
 .icon {
- 
+   
     position: relative;
     padding: 5px;
-    margin: 12px;
+    margin: 10px;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -290,12 +289,12 @@ ul li span:hover{
 
 
 
-@media (max-width:483px)   { 
+@media (max-width:768px)   { 
     /* Your mobile styles go here */
 
     .container{
         display:block;
-        height: 100%;
+       
 
     
     }
@@ -377,6 +376,10 @@ ul li span:hover{
     width:100px;
 }
 
+ .time{
+    padding:30px;
+ }
+
  #clock{
      font-size: 2rem;
    
@@ -384,8 +387,8 @@ ul li span:hover{
 }
 }
 
-
-@media (min-width:485px )and (max-width:765px){
+/* 
+@media (min-width:657px )and (max-width:950px){
 
 .left-container,.right-container{
     width: 30%;
@@ -395,12 +398,9 @@ ul li span:hover{
  }
  .mid-container{
     width: 40%;
+  
  }
- .box{
-    padding:10px 20px;
-    height: 32vh;
-    margin-top:6rem;
-    background-color: #edeef0;
+
  }
  .box h2{
     font-size: 1rem;
@@ -438,7 +438,7 @@ ul li span:hover{
 #show-countdown p{
   
     font-size:0.5rem;
-    background-color: #edeef0;
+  
   
 }
 
@@ -471,25 +471,21 @@ ul li span:hover{
 
 #search-input {
  padding:3x 6px;
- font-size:1rem;
+ font-size:0.7rem;
 
 }
 #icon-container {
     margin-top:5px;
+  
 }
 .icon {
- 
-   
     padding:2px;
-    margin:4px;
-    border-radius: 5px;
-   
-     
-   
+    margin:6px;
+    border-radius: 5px;   
 }
 
 .icon img {
-    width: 60px;
+    width: 50px;
    
 }
 .delete-icon {
@@ -500,4 +496,4 @@ ul li span:hover{
 }
 
 
-}
+} */
