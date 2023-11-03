@@ -10,7 +10,7 @@ body{
 }
 .container{
     display :flex;
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
     
 
@@ -18,6 +18,7 @@ body{
 
 .left-container{
    width: 25%;
+  
 
 }
 
@@ -33,23 +34,34 @@ body{
 .box{
 
     width:80%;
-    margin: 5rem 0rem 2rem 2rem;
+    margin:auto;
+    margin-top:5rem;
+    height: 35vh;
+    
    
-    min-height: 30vh;
+    /* background-image: url("https://cdn.vectorstock.com/i/preview-1x/03/05/pastel-pink-background-streaks-vector-39870305.jpg");
+    background-size: cover; */
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgb(227, 225, 227) 100%);
     border-radius:30px;
-    padding:30px 30px;
+    padding:20px 30px;
+ 
 
 
+}
+.scroll-list{
+
+     
+        max-height: 60%;
+        overflow-y:auto;
+      
+    
 
 }
 
 .box h2{
-    text-align:center;
-    font-weight: 600;
-   
-    margin-bottom:15px ;
+    text-align:center; 
+    margin-bottom:6px ;
 }
 
 #inputbx{
@@ -64,6 +76,8 @@ body{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
 }
+
+
 
 #add{
     width:100px;
@@ -159,10 +173,10 @@ ul li span:hover{
 
 .time{
     position:relative;
-    top:10%;
-    right:0;
+    top:20%;
+    
     width:90%;
-    margin: 10rem 2rem;
+    margin: auto;
    
     min-height: 20vh;
     background: rgb(238,174,202);
@@ -183,12 +197,12 @@ ul li span:hover{
 
 #clock{
     width:80%;
-    height: 5vh;
+   
     margin: auto;
     text-align: center;
   
    
-    /* background-color: #7ee715; */
+    background-color: #7ee715;
     border: 1px solid#212121;
     border-radius: 8px;
     color: black;
@@ -223,10 +237,11 @@ ul li span:hover{
 #icon-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
-    max-width:90%;
+    padding: 15px;
+    max-width:100%;
     margin:auto;
     margin-top: 30px;
+    /* justify-content: space-between; */
    
 }
 
@@ -234,7 +249,7 @@ ul li span:hover{
  
     position: relative;
     padding: 5px;
-    margin: 10px;
+    margin: 12px;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -275,7 +290,7 @@ ul li span:hover{
 
 
 
-@media (max-width: 768px)   { 
+@media (max-width:483px)   { 
     /* Your mobile styles go here */
 
     .container{
@@ -294,7 +309,8 @@ ul li span:hover{
 
         width:80%;
         margin:auto;
-        margin-top:30px;
+        margin-top: 5rem;
+       
        
     
     }
@@ -313,8 +329,9 @@ ul li span:hover{
         width: 60px;
         background-color: #090909;
         color:#ffff;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-align: center;
+        margin-bottom: 1px;
         
        
     
@@ -333,7 +350,7 @@ ul li span:hover{
 
 #search-input {
  
-    font-size:1.5rem;
+    font-size:1rem;
     
 
 }
@@ -347,8 +364,8 @@ ul li span:hover{
     display: flex;
     
     width:100%;
-    margin:auto
-    background-color: #7ee715;
+    margin:auto;
+    
 }
 .icon{
     width: 45%;
@@ -361,14 +378,126 @@ ul li span:hover{
 }
 
  #clock{
-    
-    
-    font-size: 2rem;
+     font-size: 2rem;
    
 
 }
-
 }
 
 
+@media (min-width:485px )and (max-width:765px){
 
+.left-container,.right-container{
+    width: 30%;
+   
+   
+ 
+ }
+ .mid-container{
+    width: 40%;
+ }
+ .box{
+    padding:10px 20px;
+    height: 32vh;
+    margin-top:6rem;
+    background-color: #edeef0;
+ }
+ .box h2{
+    font-size: 1rem;
+ }
+
+ #inputbx{
+    font-size: 0.8rem;
+    padding: 3px 6px;
+ }
+
+ #add{
+    font-size: 0.8rem;
+    padding: 3px 6px;
+    width:80px;
+ }
+ ul li{
+
+    font-size: .8rem;
+    padding:3px 6px;
+    
+}
+
+.start, .reset{
+
+    font-size: .8rem;
+    padding:3px 6px;
+    width:50px;
+   
+
+}
+.box h3{
+    font-size:0.9rem;
+}
+
+#show-countdown p{
+  
+    font-size:0.5rem;
+    background-color: #edeef0;
+  
+}
+
+.show{
+    width:1.3rem;
+     font-size: 1.3rem;
+     margin: 0.5rem 0;
+   
+
+
+}
+#error{
+    font-size:0.8rem;
+    line-height:0.3rem;
+
+}
+.time h2{
+
+    font-size: 1.3rem;
+    padding:3px 6px;;
+
+}
+
+#clock{
+    width:90%;
+   
+    font-size:1.3rem;
+   
+}
+
+#search-input {
+ padding:3x 6px;
+ font-size:1rem;
+
+}
+#icon-container {
+    margin-top:5px;
+}
+.icon {
+ 
+   
+    padding:2px;
+    margin:4px;
+    border-radius: 5px;
+   
+     
+   
+}
+
+.icon img {
+    width: 60px;
+   
+}
+.delete-icon {
+  
+    font-size: 0.7rem;
+  
+  
+}
+
+
+}
