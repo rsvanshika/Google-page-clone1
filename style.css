@@ -56,8 +56,8 @@ body{
 }
 .scroll-list{
 
-     
-        max-height: 60%;
+      
+        height:100px;
         overflow-y:auto;
       
     
@@ -167,6 +167,8 @@ ul li span:hover{
 
 .show p{
     font-size: .5rem;
+    background-color:white;
+    color:#090909;
 }
 
 
@@ -326,7 +328,6 @@ ul li span:hover{
 
     .show{
         width: 60px;
-        background-color: #090909;
         color:#ffff;
         font-size: 1.2rem;
         text-align: center;
