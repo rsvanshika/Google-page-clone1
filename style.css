@@ -22,7 +22,7 @@ body{
 }
 .left-container{
    width: 25%;
-   padding: 0 10px;
+   padding: 0 5px;
   
 
 }
@@ -30,7 +30,8 @@ body{
 .mid-container{
    
     width: 50%;
-    padding:0 10px;
+    padding:0px 10px;
+  
  
    
 }
@@ -238,8 +239,8 @@ ul li span:hover{
 #icon-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 15px;
-    max-width:80%;
+    padding: 5px;
+    max-width:90%;
     margin:auto;
     margin-top: 30px;
  
@@ -248,9 +249,9 @@ ul li span:hover{
 }
 
 .icon {
-   
+    max-width:50%;
     position: relative;
-    padding: 5px;
+   
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -264,7 +265,7 @@ ul li span:hover{
 }
 
 .icon img {
-    width: 80px;
+    width:100px;
     display: block;
    
     margin:auto;
@@ -369,7 +370,7 @@ ul li span:hover{
     
 }
 .icon{
-    width: 50%;
+
     margin:auto;
     margin-top:20px;
    
