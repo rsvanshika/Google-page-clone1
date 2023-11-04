@@ -188,7 +188,7 @@ ul li span:hover{
    
    
     margin: auto;
-    margin-top:5rem;
+    margin:5rem 0rem;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgb(227, 225, 227) 100%);
     border-radius:30px;
