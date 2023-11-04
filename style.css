@@ -12,10 +12,16 @@ body{
     display :flex;
     max-width: 100%;
     justify-content: space-between;
+    min-height: 80vh;
+    padding: 0 10px;
    
     
 
 }
+.todobox {
+    display: flex;
+    align-items: center;
+  }
 
 #error{
     font-size: 0.8rem;
@@ -52,6 +58,7 @@ body{
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgb(227, 225, 227) 100%);
     border-radius:30px;
     padding:5% 8%;
+   
  
 
 
@@ -72,14 +79,14 @@ body{
 }
 
 #inputbx{
-    width:100%;
+    width:70%;
     position: relative;
     /* margin: auto; */
     border:2px double black;
     outline:none;
     padding:2% 5%;
     border-radius: 10px;
-    font-size:1rem;
+    font-size:0.8rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 
 }
@@ -87,10 +94,10 @@ body{
 
 
 #add{
-    width:100px;
-    font-size:1rem;
+    width:60px;
+    font-size:0.8rem;
     margin-top:2%;
-    padding:2% 5%;
+    padding:2% 4%;
     
     border-radius: 10px;
    
@@ -100,12 +107,13 @@ body{
 ul li{
     position: relative;
     list-style: none;
-    font-size: 1rem;
-    padding:5px 8px;
+    font-size: 0.8rem;
+    padding:2% 4%;
     border-radius: 10px;
     background-color: azure;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     margin-top:5px;
+    width:70%;
 }
 
 ul li span{
@@ -127,9 +135,9 @@ ul li span:hover{
 .start, .reset{
 
     width:100px;
-    font-size:1rem;
+    font-size:0.8rem;
     margin-top:2%;
-    padding:2% 5%;
+    padding:2% 4%;
    
     border-radius: 10px;
    
@@ -137,7 +145,7 @@ ul li span:hover{
 }
 
 #date-input{
-    font-size:0.5rem;
+    font-size:0.8rem;
   
     width: 80%;
     padding:2% 5%;
@@ -233,14 +241,18 @@ ul li span:hover{
     border: none;
     padding:10px 30px;
     border-radius: 25px;
-    font-size:1.5rem;
+    font-size:1rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);}
 
 #icon-container {
-    display: flex;
-    flex-wrap: wrap;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* display: flex;
+    flex-wrap: wrap; */
     padding: 5px;
-    max-width:90%;
+    /* max-width:90%; */
+    max-width: 80%;
     margin:auto;
     margin-top: 30px;
  
@@ -248,8 +260,16 @@ ul li span:hover{
    
 }
 
+@media screen and (max-width: 1075px) {
+
+    #icon-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      background-color: #ff5858;
+    }
+  }
+  
 .icon {
-    max-width:50%;
+    max-width:fit-content;
     position: relative;
    
     margin: 10px;
@@ -264,19 +284,25 @@ ul li span:hover{
 
 }
 
-.icon img {
+/* .icon img {
     width:100px;
     display: block;
    
     margin:auto;
-}
+} */
+.icon img {
+    width: 100%;
+    display: block;
+    width:100px;
+    margin: auto;
+  }
 
 
 .delete-icon {
     position: absolute;
    top: 0;;
     right: 1px;
-    background-color: #ff5858;
+   
     color: white;
     cursor: pointer;
     display: none;
@@ -317,6 +343,23 @@ ul li span:hover{
        
     
     }
+    #inputbx{
+        width:80%;
+       
+    
+    }
+    
+    
+    
+    #add{
+        width:70px;
+        
+       
+    
+    }
+    
+
+
 
     #show-countdown{
         
@@ -346,7 +389,7 @@ ul li span:hover{
 
  .mid-container{
    
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -360,25 +403,44 @@ ul li span:hover{
     width: 90%;
     margin: auto;
  
+
  }
 
  #icon-container {
-    display: flex;
+    grid-template-columns: 1fr 1fr ;
+
+    width: 100%;
+    margin: auto;
+  }
+ /* #icon-container {
+   
     
     width:100%;
     margin:auto;
     
-}
-.icon{
+} */
+/* .icon{
 
     margin:auto;
     margin-top:20px;
+    width: 30%;
+    
    
-}
-.icon img{
-   max-width:95%
-}
 
+   
+} */
+/* .icon img{
+   max-width:100%
+} */
+
+.icon {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .icon img {
+    width: 90%;
+  }
  .time{
     padding:30px;
  }
@@ -390,113 +452,3 @@ ul li span:hover{
 }
 }
 
-/* 
-@media (min-width:657px )and (max-width:950px){
-
-.left-container,.right-container{
-    width: 30%;
-   
-   
- 
- }
- .mid-container{
-    width: 40%;
-  
- }
-
- }
- .box h2{
-    font-size: 1rem;
- }
-
- #inputbx{
-    font-size: 0.8rem;
-    padding: 3px 6px;
- }
-
- #add{
-    font-size: 0.8rem;
-    padding: 3px 6px;
-    width:80px;
- }
- ul li{
-
-    font-size: .8rem;
-    padding:3px 6px;
-    
-}
-
-.start, .reset{
-
-    font-size: .8rem;
-    padding:3px 6px;
-    width:50px;
-   
-
-}
-.box h3{
-    font-size:0.9rem;
-}
-
-#show-countdown p{
-  
-    font-size:0.5rem;
-  
-  
-}
-
-.show{
-    width:1.3rem;
-     font-size: 1.3rem;
-     margin: 0.5rem 0;
-   
-
-
-}
-#error{
-    font-size:0.8rem;
-    line-height:0.3rem;
-
-}
-.time h2{
-
-    font-size: 1.3rem;
-    padding:3px 6px;;
-
-}
-
-#clock{
-    width:90%;
-   
-    font-size:1.3rem;
-   
-}
-
-#search-input {
- padding:3x 6px;
- font-size:0.7rem;
-
-}
-#icon-container {
-    margin-top:5px;
-  
-}
-.icon {
-    padding:2px;
-    margin:6px;
-    border-radius: 5px;   
-}
-
-.icon img {
-    width: 50px;
-   
-}
-.delete-icon {
-  
-    font-size: 0.7rem;
-  
-  
-}
-
-
-} */
