@@ -264,7 +264,7 @@ ul li span:hover{
 
     #icon-container {
       grid-template-columns: 1fr 1fr 1fr;
-      background-color: #ff5858;
+     
     }
   }
   
@@ -302,7 +302,7 @@ ul li span:hover{
     position: absolute;
    top: 0;;
     right: 1px;
-   
+    background-color: #ff5858;
     color: white;
     cursor: pointer;
     display: none;
